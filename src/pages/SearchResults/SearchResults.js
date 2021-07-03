@@ -1,5 +1,5 @@
 import React, {useEffect, useState, useCallback} from "react";
-import { useQuery, useMutation } from 'react-query'
+import { useMutation } from 'react-query'
 import { useSearchValueContext } from "../../context/SearchValueContext"
 import { getSearchResults } from "../../api/getSearchResults"
 import ListItem from "../../components/ListItem/ListItemWithLink"
@@ -20,16 +20,16 @@ const SearchResults = () => {
 
 	useEffect(() => {
 		delayedSearch(searchbarValue)
-	}, [searchbarValue])
+	}, [searchbarValue, delayedSearch])
 
 	useEffect(() => {
 		setSearchResultsList(data?.data?.results ?? [])
 
-		if(data && currentPage == 1){
+		if(data && currentPage === 1){
 			const itemsPerPage = data.data.results.length
 			setPageCount(Math.ceil(data.data.count/itemsPerPage))
 		}
-	}, [data])
+	}, [data, currentPage])
 
 	const handlePageChange = ({selected}) => {
 		setCurrentPage(selected + 1)
@@ -38,7 +38,7 @@ const SearchResults = () => {
 	if(isLoading){
 		return (
 			<div className="search-page">
-				<img src={Loader} className="loader"/>
+				<img src={Loader} className="loader" alt="loader"/>
 			</div>
 		)
 	}

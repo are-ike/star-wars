@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Film.css"
 import { getFilms } from "../../api/getFilms";
 import { useQuery } from 'react-query'
+import Loader from "../../assets/loader.gif"
 
 const Film = ({filmUrl}) => {
 	
@@ -12,6 +13,20 @@ const Film = ({filmUrl}) => {
 		if(data) setFilm(data.data)
 	}, [data])
 
+	if(isLoading){
+		return (
+			<div className="film">
+				<img src={Loader} className="loader" alt="loader"/>
+			</div>
+		)
+	}
+	if(error){
+		return (
+			<div className="home-page">
+				<h2>Error Loading Film</h2>
+			</div>
+		)
+	}
 	return (
 		<div className="film">
 			<div className="item">

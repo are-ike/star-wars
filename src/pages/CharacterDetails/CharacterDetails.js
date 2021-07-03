@@ -25,7 +25,7 @@ const CharacterDetails = ({match}) => {
 	if(isLoading){
 		return (
 			<div className="details-page">
-				<img src={Loader} className="loader"/>
+				<img src={Loader} className="loader" alt="loader"/>
 			</div>
 		)
 	}

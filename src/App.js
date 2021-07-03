@@ -1,4 +1,4 @@
-import React, { useEffect, createContext } from "react"; 
+import React from "react"; 
 import Header from "../src/components/Header/Header";
 import Sidebar from "../src/components/Sidebar/Sidebar";
 import HomePage from "./pages/HomePage/HomePage";

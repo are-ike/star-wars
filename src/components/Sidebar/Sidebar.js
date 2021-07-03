@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import ListItem from "../ListItem/ListItemWithLink"
 import { KeyboardArrowRight, KeyboardArrowLeft} from '@material-ui/icons';
 import { useFavouriteCharactersContext } from "../../context/FavouriteCharactersContext"

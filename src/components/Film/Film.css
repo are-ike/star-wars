@@ -6,6 +6,12 @@
 	border: solid 1px grey;
 	margin: 0.5rem;
 	font-size: 0.7rem;
+	
+}
+.film .loader{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .item{
 	display: flex;

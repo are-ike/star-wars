@@ -1,9 +1,8 @@
-import React, { useState, useCallback} from "react";
+import React, { useState } from "react";
 import "./SearchBar.css"
 import { SearchOutlined } from '@material-ui/icons';
 import { useHistory } from "react-router-dom"
 import { useSearchValueContext } from "../../context/SearchValueContext"
-import _ from "lodash";
 
 const SearchBar = () => {
 	const [searchInput, setSearchInput] = useState("")

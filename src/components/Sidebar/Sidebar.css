@@ -83,6 +83,10 @@
 	}
 	.sidebar-content{
 		z-index: 20;
+		padding-top: 2rem;
+	}
+	.heading{
+		margin-bottom: 1rem;
 	}
 	@keyframes open-sidebar {
         from {

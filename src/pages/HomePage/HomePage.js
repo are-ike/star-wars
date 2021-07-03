@@ -18,12 +18,12 @@ const Home = () => {
 	useEffect(() => {
 		setCharacters(data?.data?.results ?? [])
 
-		if(data && currentPage == 1){
+		if(data && currentPage === 1){
 			const itemsPerPage = data.data.results.length
 			setPageCount(Math.ceil(data.data.count/itemsPerPage))
 		}
 		
-	}, [data])
+	}, [data, currentPage])
 
 	const handlePageChange = ({selected}) => {
 		setCurrentPage(selected + 1)
@@ -32,7 +32,7 @@ const Home = () => {
 	if(isLoading){
 		return (
 			<div className="home-page">
-				<img src={Loader} className="loader"/>
+				<img src={Loader} className="loader" alt="loader"/>
 			</div>
 		)
 	}
