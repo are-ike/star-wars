@@ -1,12 +1,12 @@
 # Star Wars API App
 
-This application uses [Star Wars API](https://swapi.dev/) retrieve, display and search the charactes in the Star Wars Universe.
+This application uses [Star Wars API](https://swapi.dev/) retrieve, display and search the characters in the Star Wars Universe.
 
 ## Home Page
 
 This page displays all the characters retrieved from the API.
 
-## ChaacterDetails Page
+## CharacterDetails Page
 
 This page displays details of each character retrieved from the API.
 
