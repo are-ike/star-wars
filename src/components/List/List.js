@@ -2,9 +2,14 @@ import React from "react";
 import "./List.css";
 
 const List = ({children, listType}) => {
-
+	let style = "default-list"
+	if(listType === "info"){
+		style = "info-list"
+	}else if(listType === "films"){
+		style = "film-list"
+	}
 	return (
-		<div className={listType == "short" ? "short-list" : "default-list"}>
+		<div className={style}>
 			{children}
 		</div>
 	)

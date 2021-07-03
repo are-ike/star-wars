@@ -1,0 +1,22 @@
+.film{
+	padding: 1rem;
+	width: 20rem;
+	border-radius: 6px;
+	box-shadow: 1px 2px 3px grey;
+	border: solid 1px grey;
+	margin: 0.5rem;
+	font-size: 0.7rem;
+}
+.item{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+}
+.item h2{
+	margin-bottom: 1rem;
+}
+
+.item p:nth-child(2n){
+	font-weight: bold;
+}

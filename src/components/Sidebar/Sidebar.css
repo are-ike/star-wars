@@ -51,3 +51,45 @@
 	background-color: rgba(0, 0, 0, .8); 
 	transition: all 0.2s ;
 }
+.sidebar-mobile{
+	display: none;
+}
+.d-none{
+	display: none;
+	pointer-events: none;
+}
+@media (max-width: 780px){
+	.sidebar-mobile{
+		display: block;
+	}
+	.sidebar-mobile{
+
+		position: fixed;
+		padding-left: 20px;
+		top: 3vh;
+		z-index: 1;
+	}
+	.sidebar-mobile .sidebar-icon{
+		color: #7180d4;
+	}
+	.sidebar-closed{
+		display: none;
+	}
+	.sidebar-open{
+		width: 80%;
+	}
+	.sidebar-closed, .sidebar-open{
+		pointer-events: none;
+	}
+	.sidebar-content{
+		z-index: 20;
+	}
+	@keyframes open-sidebar {
+        from {
+            width: 0%;
+        }
+        to {
+            width: 80%;
+        }
+    }
+}

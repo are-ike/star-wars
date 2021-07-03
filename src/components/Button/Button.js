@@ -13,7 +13,7 @@ const Button = ({characterData}) => {
 		}
 		return false
 
-	}, [characters])
+	}, [characters, characterData.characterID])
 
 	return (
 		<button className="btn" 

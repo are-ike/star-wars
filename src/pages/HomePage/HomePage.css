@@ -35,3 +35,15 @@
 color: rgb(198, 197, 202);
 border: 1px solid rgb(198, 197, 202);
 }
+
+@media (max-width: 780px){
+	.pagination{
+		font-size: 0.7rem;
+		margin: 0;
+	}
+}
+@media (max-width: 500px){
+	.home-page{
+		padding: 0 2rem;
+	}
+}

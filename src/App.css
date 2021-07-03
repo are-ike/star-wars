@@ -22,4 +22,13 @@
 .loader{
   width: 4rem;
   height: 4rem;
+  margin: auto auto;
+}
+
+@media (max-width: 700px) {
+  .page-body {
+      width: 100%;
+      margin-left: 0px;
+  }
+
 }

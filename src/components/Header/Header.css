@@ -14,3 +14,11 @@
 	color: white;
 	text-decoration: none;
 }
+@media (max-width: 780px) {
+    .header {
+        left: 0%;
+        width: 100%;
+        padding-left: 70px;
+    }
+
+}

@@ -21,6 +21,7 @@ const CharacterDetails = ({match}) => {
 
 	}, [data])
 
+	
 	if(isLoading){
 		return (
 			<div className="details-page">
@@ -48,13 +49,14 @@ const CharacterDetails = ({match}) => {
 				<ListItem property="Mass" value={characterDetailsData.mass}/>
 				<ListItem property="Height" value={characterDetailsData.height}/>
 			</List>
-			<div>
+			<h2 className="films-header">Films</h2>
+			<List listType="films">
 				{
 					characterDetailsData?.films?.map(film => (
 						<Film key={film} filmUrl={film}/>
 					))
 				}
-			</div>
+			</List>
 		</div>
 	)
 }

@@ -69,7 +69,9 @@ const SearchResults = () => {
 			</List>
 			<ReactPaginate
 				pageCount={pageCount}
-				pageRangeDisplayed={10}
+				pageRangeDisplayed={1}
+				marginPagesDisplayed={1}
+				breakLabel={'...'}
 				onPageChange={handlePageChange}
 				containerClassName="pagination"
 				previousLinkClassName="pagination-link"

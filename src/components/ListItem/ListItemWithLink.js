@@ -4,12 +4,12 @@ import { Link } from "react-router-dom"
 import { RemoveCircleOutline } from '@material-ui/icons';
 import { useFavouriteCharactersContext } from "../../context/FavouriteCharactersContext"
 
-const ListItemWithLink = ({characterID, characterName, hasIcon}) => {
+const ListItemWithLink = ({characterID, characterName, hasIcon, clickFunction}) => {
 	const {removeFromFavourites} = useFavouriteCharactersContext()
 	
 	return (
 		<div className={hasIcon ? "list-item-link" : "list-item"}>
-			<Link to={`/character/${characterID}`} className="link">
+			<Link to={`/character/${characterID}`} className="link" onClick={clickFunction}>
 				<p>{characterName}</p>
 			</Link>
 			{hasIcon ? 

@@ -17,9 +17,15 @@ const Sidebar = () => {
 	
 	return (
 		<div className={isOpen ? "overlay": ""} onClick={closeSidebar}>
+			<div className="sidebar-mobile">
+				<KeyboardArrowRight
+					className={isOpen ? "sidebar-icon d-none": "sidebar-icon"}
+					onClick={() => setIsOpen(true)}
+				/>
+			</div>
 			<div className={isOpen ? "sidebar-open" : "sidebar-closed"}>
 				{isOpen ? 
-				<div className="sidebar-content" onClick={() => setIsOpen(false)}>
+				<div className="sidebar-content">
 					<div className="heading">
 						<KeyboardArrowLeft
 							className="sidebar-icon close"
@@ -27,7 +33,13 @@ const Sidebar = () => {
 						/>
 						<p>Favourites</p>
 					</div>
-					{characters.map(character => <ListItem {...character } key={character.characterID} hasIcon={true}/>)}
+					{ characters.length ?
+					
+					characters.map(character => 
+						<ListItem {...character } key={character.characterID} hasIcon={true} clickFunction={() => setIsOpen(false)}/>)
+					:
+					"No Favourites"
+					}
 				</div>
 					
 					:
