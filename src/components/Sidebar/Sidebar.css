@@ -1,0 +1,53 @@
+.sidebar-open, .sidebar-closed{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background: #7180d4;
+	padding: 1rem;
+	box-shadow: 1px 2px 3px rgba(0, 0, 0, .8);
+	color: white;
+	position: fixed;
+}
+@keyframes open-sidebar {
+	from {width: 4%;}
+	to {width: 22%;}
+}
+  
+.sidebar-open{
+	width: 22%;
+	z-index: 3;
+	animation-name:  open-sidebar;
+	animation-duration: 1s;
+	opacity: .95;
+}
+
+.sidebar-closed{
+	align-items: center;
+	width: 4%;
+}
+.heading {
+	margin-bottom: 1rem;
+	display: flex;
+}
+.heading p{
+	margin-left: 0.5rem;
+	font-weight: 600;
+}
+.sidebar-icon{
+	font-size: 1.5rem;
+	cursor: pointer;
+	color: white;
+}
+.sidebar-icon .close{
+	margin-bottom: 0.5rem;
+}
+.overlay{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	background-color: rgba(0, 0, 0, .8); 
+	transition: all 0.2s ;
+}

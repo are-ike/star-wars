@@ -1,0 +1,24 @@
+.list-item, .list-item-link{
+	padding: 1rem;
+	margin-bottom: 0.2rem;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.list-item{
+	box-shadow: 1px 2px 3px grey;
+}
+.list-item-link{
+	border-bottom: solid 1px ;
+	border-top: solid 1px ;
+}
+.link{
+	text-decoration: none;
+}
+.list-item-link .link{
+	color: white;
+
+}
+.list-item-link .icon{
+	cursor: pointer;
+}

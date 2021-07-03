@@ -1,0 +1,16 @@
+.header{
+	height: 9vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 2rem;
+	box-sizing: border-box;
+	position: fixed;
+	right: 0;
+	left: 4%;
+	background-color: black;
+}
+.header .link{
+	color: white;
+	text-decoration: none;
+}
